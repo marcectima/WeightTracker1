@@ -34,5 +34,11 @@ namespace WeightTracker.Controllers
 
             return View();
         }
+        public ActionResult Result()
+        {
+            ViewBag.Message = "Results";
+
+            return View();
+        }
     }
 }

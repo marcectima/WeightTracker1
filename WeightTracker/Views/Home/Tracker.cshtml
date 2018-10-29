@@ -1,10 +1,12 @@
 ﻿@{
     ViewBag.Title = "Tracker";
 }
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
-<p>
-    <a asp-action="Create">Create New</a> "Name<br />
-    Height<br />
-    Weight"
-</p> 
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <p>
+        Calories   <input asp-for="Title" class="form-control" /><br />
+        Mileage   <input asp-for="Title" class="form-control" /><br />
+</p>
+</div>
