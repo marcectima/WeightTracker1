@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="WeightTrackerDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dairy(Non liquid)">
+          <Key>
+            <PropertyRef Name="DairyType" />
+          </Key>
+          <Property Name="DairyType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DairyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityType Name="FoodIntake">
+          <Key>
+            <PropertyRef Name="Food" />
+          </Key>
+          <Property Name="Food" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FoodType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Fruits">
+          <Key>
+            <PropertyRef Name="FruitType" />
+          </Key>
+          <Property Name="FruitType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FruitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityType Name="Meats">
+          <Key>
+            <PropertyRef Name="MeatType" />
+          </Key>
+          <Property Name="MeatType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MeatName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityType Name="Seafoods">
+          <Key>
+            <PropertyRef Name="SeafoodType" />
+          </Key>
+          <Property Name="SeafoodType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SeafoodName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityType Name="Sweets">
+          <Key>
+            <PropertyRef Name="SweetsType" />
+          </Key>
+          <Property Name="SweetsType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SweetsName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityType Name="Vegetables">
+          <Key>
+            <PropertyRef Name="VegetableType" />
+          </Key>
+          <Property Name="VegetableType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VegetableName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityType Name="Wheats">
+          <Key>
+            <PropertyRef Name="WheatType" />
+          </Key>
+          <Property Name="WheatType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WheatName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Calories" Type="int" />
+        </EntityType>
+        <EntityContainer Name="WeightTrackerDatabaseModelStoreContainer">
+          <EntitySet Name="Dairy(Non liquid)" EntityType="Self.Dairy(Non liquid)" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FoodIntake" EntityType="Self.FoodIntake" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fruits" EntityType="Self.Fruits" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Meats" EntityType="Self.Meats" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Seafoods" EntityType="Self.Seafoods" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sweets" EntityType="Self.Sweets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vegetables" EntityType="Self.Vegetables" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Wheats" EntityType="Self.Wheats" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WeightTrackerDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Dairy_Non_liquid_">
+          <Key>
+            <PropertyRef Name="DairyType" />
+          </Key>
+          <Property Name="DairyType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DairyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FoodIntake">
+          <Key>
+            <PropertyRef Name="Food" />
+          </Key>
+          <Property Name="Food" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FoodType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Fruit">
+          <Key>
+            <PropertyRef Name="FruitType" />
+          </Key>
+          <Property Name="FruitType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FruitName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Meat">
+          <Key>
+            <PropertyRef Name="MeatType" />
+          </Key>
+          <Property Name="MeatType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MeatName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Seafood">
+          <Key>
+            <PropertyRef Name="SeafoodType" />
+          </Key>
+          <Property Name="SeafoodType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SeafoodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Sweet">
+          <Key>
+            <PropertyRef Name="SweetsType" />
+          </Key>
+          <Property Name="SweetsType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SweetsName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Vegetable">
+          <Key>
+            <PropertyRef Name="VegetableType" />
+          </Key>
+          <Property Name="VegetableType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VegetableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Wheat">
+          <Key>
+            <PropertyRef Name="WheatType" />
+          </Key>
+          <Property Name="WheatType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WheatName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Calories" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="WeightTrackerDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dairy_Non_liquid_" EntityType="Self.Dairy_Non_liquid_" />
+          <EntitySet Name="FoodIntakes" EntityType="Self.FoodIntake" />
+          <EntitySet Name="Fruits" EntityType="Self.Fruit" />
+          <EntitySet Name="Meats" EntityType="Self.Meat" />
+          <EntitySet Name="Seafoods" EntityType="Self.Seafood" />
+          <EntitySet Name="Sweets" EntityType="Self.Sweet" />
+          <EntitySet Name="Vegetables" EntityType="Self.Vegetable" />
+          <EntitySet Name="Wheats" EntityType="Self.Wheat" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WeightTrackerDatabaseModelStoreContainer" CdmEntityContainer="WeightTrackerDatabaseEntities">
+          <EntitySetMapping Name="Dairy_Non_liquid_">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Dairy_Non_liquid_">
+              <MappingFragment StoreEntitySet="Dairy(Non liquid)">
+                <ScalarProperty Name="DairyType" ColumnName="DairyType" />
+                <ScalarProperty Name="DairyName" ColumnName="DairyName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FoodIntakes">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.FoodIntake">
+              <MappingFragment StoreEntitySet="FoodIntake">
+                <ScalarProperty Name="Food" ColumnName="Food" />
+                <ScalarProperty Name="FoodType" ColumnName="FoodType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fruits">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Fruit">
+              <MappingFragment StoreEntitySet="Fruits">
+                <ScalarProperty Name="FruitType" ColumnName="FruitType" />
+                <ScalarProperty Name="FruitName" ColumnName="FruitName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Meats">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Meat">
+              <MappingFragment StoreEntitySet="Meats">
+                <ScalarProperty Name="MeatType" ColumnName="MeatType" />
+                <ScalarProperty Name="MeatName" ColumnName="MeatName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seafoods">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Seafood">
+              <MappingFragment StoreEntitySet="Seafoods">
+                <ScalarProperty Name="SeafoodType" ColumnName="SeafoodType" />
+                <ScalarProperty Name="SeafoodName" ColumnName="SeafoodName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sweets">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Sweet">
+              <MappingFragment StoreEntitySet="Sweets">
+                <ScalarProperty Name="SweetsType" ColumnName="SweetsType" />
+                <ScalarProperty Name="SweetsName" ColumnName="SweetsName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vegetables">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Vegetable">
+              <MappingFragment StoreEntitySet="Vegetables">
+                <ScalarProperty Name="VegetableType" ColumnName="VegetableType" />
+                <ScalarProperty Name="VegetableName" ColumnName="VegetableName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Wheats">
+            <EntityTypeMapping TypeName="WeightTrackerDatabaseModel.Wheat">
+              <MappingFragment StoreEntitySet="Wheats">
+                <ScalarProperty Name="WheatType" ColumnName="WheatType" />
+                <ScalarProperty Name="WheatName" ColumnName="WheatName" />
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

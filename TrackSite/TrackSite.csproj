@@ -8,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CE27A9FF-793D-4C18-ABC8-8B68B2E97E62}</ProjectGuid>
+    <ProjectGuid>{EAE9E778-5904-4C90-8799-5F4C333961B3}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WeightTracker</RootNamespace>
-    <AssemblyName>WeightTracker</AssemblyName>
+    <RootNamespace>TrackSite</RootNamespace>
+    <AssemblyName>TrackSite</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -55,8 +55,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -155,50 +153,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\FoodIntakesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\TrackInputController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Dairy_Non_liquid_.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FoodIntake.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Fruit.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Meat.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Seafood.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Sweet.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TrackerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TrackerModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TrackerModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TrackerModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TrackerModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Vegetable.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Wheat.cs">
-      <DependentUpon>TrackerModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -211,27 +168,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\TrackerModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TrackerModel.Context.cs</LastGenOutput>
-      <DependentUpon>TrackerModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\TrackerModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TrackerModel.edmx</DependentUpon>
-      <LastGenOutput>TrackerModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\TrackerModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TrackerModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\TrackerModel.edmx.diagram">
-      <DependentUpon>TrackerModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -258,23 +198,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Tracker.cshtml" />
-    <Content Include="Views\Home\Result.cshtml" />
-    <Content Include="Views\FoodIntakes\Create.cshtml" />
-    <Content Include="Views\FoodIntakes\Delete.cshtml" />
-    <Content Include="Views\FoodIntakes\Details.cshtml" />
-    <Content Include="Views\FoodIntakes\Edit.cshtml" />
-    <Content Include="Views\FoodIntakes\Index.cshtml" />
-    <Content Include="Views\TrackInput\Manual.cshtml" />
-    <Content Include="Views\TrackInput\MealInput.cshtml" />
-    <Content Include="Views\TrackInput\FoodInput.cshtml" />
-    <Content Include="Views\TrackInput\Meals.cshtml" />
-    <Content Include="Views\Home\MealsTake.cshtml" />
-    <Content Include="Views\FoodIntakes\MealsInput.cshtml" />
-    <Content Include="Views\TrackInput\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -288,9 +215,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -308,9 +232,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>54858</DevelopmentServerPort>
+          <DevelopmentServerPort>64537</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:54858/</IISUrl>
+          <IISUrl>http://localhost:64537/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

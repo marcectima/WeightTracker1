@@ -40,5 +40,11 @@ namespace WeightTracker.Controllers
 
             return View();
         }
+        public string[] makeitmeal = new string[3];
+        public void meal()
+        {
+            makeitmeal = new string[] { "Foods", "Meals", "Categories" };
+        }
+
     }
 }
