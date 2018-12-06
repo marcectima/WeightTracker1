@@ -3,20 +3,26 @@
     ViewBag.Title = "Tracker";
 }
 <div class="jumbotron">
+    <style>
+        body {
+            background-image: url("paper.gif");
+            background-color: #334cf3;
+        }
+    </style>
     <h2>@ViewBag.Title</h2>
     <h3>@ViewBag.Message</h3>
 
     <p>
         <div>
-            Select the type of input you'll like to do.<br/>
-            <br/>
+            Select the type of input you'll like to do.<br />
+            <br />
             @Html.ActionLink("Food", "FoodInput", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
             @Html.ActionLink("Make it a Meal", "MealInput", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
-            @Html.ActionLink("Manual", "Manual", "TrackInput",null, new { @class = "btn btn-success btn-lg" })
-     
-            
+            @Html.ActionLink("Manual", "Manual", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
+
+
         </div>
-        <br/>
+        <br />
         Enter your Meal Intake Manually<br />
         Calories   <input asp-for="Title" class="form-control" /><br />
         <br />
