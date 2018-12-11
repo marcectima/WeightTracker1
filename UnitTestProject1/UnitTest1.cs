@@ -9,7 +9,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
-           
+            int calories = 0, mileage = 0, pace;
+            pace = calories - (mileage / 10);
         }
     }
 }

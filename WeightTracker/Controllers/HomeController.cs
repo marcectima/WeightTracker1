@@ -8,10 +8,11 @@ namespace WeightTracker.Controllers
 {
     public class HomeController : Controller
     {
+        int calories, mileages, pace;
         public ActionResult Index()
         {
             ViewBag.Message = "Regrister\n Username\n Name\n Age\n Gender\n Height\n Weight\n";
-
+            pace = calories - mileages;
             return View();
         }
          
