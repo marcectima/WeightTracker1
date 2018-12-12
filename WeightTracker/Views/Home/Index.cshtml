@@ -11,12 +11,13 @@
     <h2>Users Info</h2>
     <p>
         Name  <input asp-for="Title" class="form-control" />
-        Age   <input asp-for="Title" class="form-control" />
+        Age   <input asp-for="Title" class="form-control" /> 
         Gender   <input asp-for="Title" class="form-control" />
         Height   <input asp-for="Title" class="form-control" />
         Weight   <input asp-for="Title" class="form-control" />
         Time Zone    <input asp-for="Title" class="form-control" />
     </p>
+    
     <div>
         <input type="submit" value="Submit" class="btn btn-success btn-lg" />
         @Html.ActionLink("Cancel", "MealsTake", null, new { @class = "btn btn-success btn-lg" })

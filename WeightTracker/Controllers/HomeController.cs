@@ -14,11 +14,12 @@ namespace WeightTracker.Controllers
             ViewBag.Message = "Regrister\n Username\n Name\n Age\n Gender\n Height\n Weight\n";
             pace = calories - mileages;
             return View();
+            
         }
          
         public ActionResult About()
         {
-            ViewBag.Message = "This app allows you to keep track of your weight and the path of the weight that you want to be.";
+            ViewBag.Message = "This app allows users to keep track of your weight, mileage, and the path to prefered weight." + pace;
 
             return View();
         }
