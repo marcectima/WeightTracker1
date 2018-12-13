@@ -5,8 +5,7 @@
 <div class="jumbotron">
     <style>
         body {
-            background-image: url("paper.gif");
-            background-color: #00ffff;
+            background-image: url(https://wallpapercave.com/wp/UNgPrON.jpg );
         }
     </style>
     <h2>@ViewBag.Title</h2>
@@ -21,17 +20,9 @@
             @Html.ActionLink("Manual", "Manual", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
         </div>
         <br />
-        Enter your Meal Intake Manually<br />
-        Calories<input asp-for="Title" class="form-control" />
-        <style>
-            body {
-                background-image: url("paper.gif");
-                background-color: #334cf3;
-            }
-        </style><br />
+        Enter calories and mileage taking<br />
         <br />
-        <br />
-        Add your Mileage<br />
-        Mileage   <input asp-for="Title" class="form-control" /><br />
+        Calories<input asp-for="Title" class="form-control" /><br />
+        Mileage <input asp-for="Title" class="form-control" /><br />
     </p>
 </div>

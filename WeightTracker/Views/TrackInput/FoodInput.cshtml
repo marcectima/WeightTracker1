@@ -1,4 +1,28 @@
-﻿<h1>Food Input</h1><br />
-                   <br />
-                   <br />
-<h2> Your Food</h2>
+﻿<h1>Regrister</h1>
+<br />
+<h2>Enter your information</h2>
+<div>
+    <style>
+        body {
+            background-image: url(http://undergroundhealthreporter.com/wp/wp-content/uploads/2017/03/fruits-vegetables_medium.jpg);
+        }
+    </style>
+    <p>
+        Name   <input asp-for="Title" class="form-control" />
+        Age   <input asp-for="Title" class="form-control" />
+        Gender   <input asp-for="Title" class="form-control" />
+        Height   <input asp-for="Title" class="form-control" />
+        Weight   <input asp-for="Title" class="form-control" />
+        Time Zone    <input asp-for="Title" class="form-control" />
+        <style type="text/css">
+            body {
+                font-family: 'Times New Roman';
+                font-size: 1.80em;
+                color: white;
+            }
+        </style>
+
+        <br />
+        @Html.ActionLink("Submit", "MealsTake", null, new { @class = "btn btn-success btn-lg" })
+    </p>
+</div>

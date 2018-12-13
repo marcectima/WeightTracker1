@@ -1,26 +1,32 @@
-﻿@{
+﻿@model WeightTracker.Models.FoodIntake
+@{
     ViewBag.Title = "Home Page";
 }
-<div class="jumbotron">
+<div>
     <style>
         body {
-            background-image: url("paper.gif");
-            background-color: #334cf3;
+            background-image: url(http://undergroundhealthreporter.com/wp/wp-content/uploads/2017/03/fruits-vegetables_medium.jpg);
         }
     </style>
-    <h2>Users Info</h2>
+    <h2>Login</h2>
     <p>
-        Name  <input asp-for="Title" class="form-control" />
-        Age   <input asp-for="Title" class="form-control" /> 
-        Gender   <input asp-for="Title" class="form-control" />
-        Height   <input asp-for="Title" class="form-control" />
-        Weight   <input asp-for="Title" class="form-control" />
-        Time Zone    <input asp-for="Title" class="form-control" />
+        Username <input asp-for="Title" class="form-control" />
+        Password <input asp-for="Title" class="form-control" />
+        <br />
+        @Html.ActionLink("Enter", "MealsTake", null, new { @class = "btn btn-success btn-lg" })
+        <style type="text/css">
+            body {
+                font-family: 'Times New Roman';
+                font-size: 2.00em;
+                color: white;
+            }
+        </style>
+        <br />
+        <br />
     </p>
-    
     <div>
-        <input type="submit" value="Submit" class="btn btn-success btn-lg" />
-        @Html.ActionLink("Cancel", "MealsTake", null, new { @class = "btn btn-success btn-lg" })
-    </div>
+        If you don't have an account please regrister
+        @Html.ActionLink("Create", "FoodInput", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
 
+    </div>
 </div>
