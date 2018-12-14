@@ -8,6 +8,10 @@
         }
     </style>
     <p>
+        Username   <input asp-for="Title" class="form-control" />
+        Password   <input asp-for="Title" class="form-control" />
+        Confirm Password    <input asp-for="Title" class="form-control" />
+        Email   <input asp-for="Title" class="form-control" />
         Name   <input asp-for="Title" class="form-control" />
         Age   <input asp-for="Title" class="form-control" />
         Gender   <input asp-for="Title" class="form-control" />
@@ -17,11 +21,11 @@
         <style type="text/css">
             body {
                 font-family: 'Times New Roman';
-                font-size: 1.80em;
+                font-weight: bold;
+                font-size: 2.50em;
                 color: white;
             }
         </style>
-
         <br />
         @Html.ActionLink("Submit", "MealsTake", null, new { @class = "btn btn-success btn-lg" })
     </p>

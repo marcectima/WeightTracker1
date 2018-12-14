@@ -3,31 +3,38 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="jumbotron">
+    <style>
+        body {
+            background-image: url(http://undergroundhealthreporter.com/wp/wp-content/uploads/2017/03/fruits-vegetables_medium.jpg);
+            background-color: #334cf3;
+        }
+    </style>
+    <h2>Index</h2>
 
-<h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FoodType)
+            </th>
+            <th></th>
+        </tr>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FoodType)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FoodType)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Food }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Food }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Food })
-        </td>
-    </tr>
-}
-
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FoodType)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Food }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Food }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Food })
+                </td>
+            </tr>
+        }
+</div>
 </table>

@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Tracker";
 }
-<div class="jumbotron">
+<div>
     <style>
         body {
             background-image: url(https://wallpapercave.com/wp/UNgPrON.jpg );
@@ -10,19 +10,23 @@
     </style>
     <h2>@ViewBag.Title</h2>
     <h3>@ViewBag.Message</h3>
-
     <p>
+        <style type="text/css">
+            body {
+                font-family: 'Times New Roman';
+                font-weight: bold;
+                font-size: 2.50em;
+                color: black;
+            }
+        </style>
         <div>
-            Select the type of input you'll like to do.<br />
-            <br />
-            @Html.ActionLink("Food", "FoodInput", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
-            @Html.ActionLink("Make it a Meal", "MealInput", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
-            @Html.ActionLink("Manual", "Manual", "TrackInput", null, new { @class = "btn btn-success btn-lg" })
+            @Html.ActionLink("Make It A Meal", "Create", "FoodIntakes", null, new { @class = "btn btn-success btn-lg" })
         </div>
-        <br />
         Enter calories and mileage taking<br />
-        <br />
-        Calories<input asp-for="Title" class="form-control" /><br />
-        Mileage <input asp-for="Title" class="form-control" /><br />
+        Calories<input asp-for="Title" class="form-control" />
+        Mileage <input asp-for="Title" class="form-control" />
+        <div>
+            @Html.ActionLink("Add","FoodIntakes", null, new { @class = "btn btn-success btn-lg" })
+        </div>
     </p>
 </div>

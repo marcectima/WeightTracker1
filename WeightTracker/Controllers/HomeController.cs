@@ -19,7 +19,6 @@ namespace WeightTracker.Controllers
             pace = calories - mileages;
             return View();
         }
-         
         public ActionResult About()
         {
             ViewBag.Message = "This app allows users to keep track of your weight, mileage, and the path to prefered weight." + pace;

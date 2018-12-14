@@ -3,24 +3,31 @@
 @{
     ViewBag.Title = "Details";
 }
+<div class="jumbotron">
+    <style>
+        body {
+            background-image: url(https://brslifestyle.files.wordpress.com/2012/05/ps012-bmi-bathroom-scale1.jpg );
+            background-color: #334cf3;
+        }
+    </style>
+    <h2>Details</h2>
 
-<h2>Details</h2>
+    <div>
+        <h4>FoodIntake</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FoodType)
+            </dt>
 
-<div>
-    <h4>FoodIntake</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FoodType)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FoodType)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FoodType)
-        </dd>
-
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Food }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Food }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
